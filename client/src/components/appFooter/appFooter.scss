@@ -1,3 +1,145 @@
 .footer {
-   
+    padding: 5rem 0 3rem;
+    background: #0F0F10;
+
+    &__top {
+        display: grid;
+        grid-template-columns: repeat(12, 0.08333333333fr);
+        grid-gap: 2rem;
+
+        &:not(:last-child) {
+            margin-bottom: 11.6rem;
+        }
+    }
+
+    &__logo {
+        grid-column: span 2;
+
+        img {
+            width: 11.2rem;
+        }
+    }
+
+    &__sub {
+        grid-column: span 4;
+
+        &-title {
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+    }
+
+    &__form {
+        &-group {
+            max-width: 36.5rem;
+            position: relative;
+        }
+
+        &-input {
+            width: 100%;
+            height: 6rem;
+            padding: 0 4.5rem 0 2rem;
+
+            background: #1B1B23;
+            border-radius: 50px;
+            border: none;
+
+            font-family: inherit;
+            font-size: inherit;
+            color: #fff;
+
+            &::placeholder {
+                color: #A7ACBB;
+            }
+        }
+
+        &-error {
+            position: absolute;
+            left: 0;
+            bottom: -3rem;
+        }
+
+        &-btn {
+            cursor: pointer;
+            background: none;
+            border: none;
+            position: absolute;
+            top: 1.8rem;
+            right: 2rem;
+
+            .icon {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+    }
+
+    &__nav {
+        grid-column: span 3;
+
+        &-item {
+            font-weight: 600;
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &__contacts {
+        grid-column: span 3;
+
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        &-subtitle {
+            margin-bottom: 1rem;
+            color: #A7ACBB;
+        }
+
+        &-wrap {
+            display: flex;
+            align-items: center;
+        }
+
+        &-elem {
+            display: block;
+            font-weight: 700;
+            transition: color .3s;
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    &__bottom {
+        padding-top: 2.4rem;
+        display: grid;
+        grid-template-columns: .5fr .25fr .25fr;
+        grid-gap: 2rem;
+        border-top: 1px solid rgba(256, 256, 256, .15);
+        line-height: 2.4rem;
+        color: #A7ACBB;
+    }
+
+    &__policy {
+        transition: color .3s;
+    }
+
+    &__deus {
+        justify-self: end;
+        display: flex;
+        align-items: center;
+
+        .icon {
+            width: 8.3rem;
+            height: 3.5rem;
+            margin-left: 1rem;
+            transform: translateY(-.7rem);
+        }
+    }
 }

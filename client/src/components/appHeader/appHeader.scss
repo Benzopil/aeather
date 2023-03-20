@@ -1,3 +1,57 @@
 .header {
- 
+    width: 100%;
+    padding: 2rem 0;
+
+    background: rgba(15, 15, 16, 0.5);
+    backdrop-filter: blur(9.5px);
+
+    color: #FFFFFF;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: auto;
+
+        img {
+            width: 11.2rem;
+        }
+    }
+
+    &__nav {
+        &-list {
+            display: flex;
+            align-items: center;
+            margin-right: 4rem;
+        }
+
+        &-item {
+            font-weight: 600;
+            transition: color .3s;
+
+            &:not(:last-child) {
+                margin-right: 4rem;
+            }
+        }
+    }
+
+    &__acc {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+
+        .icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            flex: 0 0 2.4rem;
+            margin-right: 0.6rem;
+        }
+    }
 }
