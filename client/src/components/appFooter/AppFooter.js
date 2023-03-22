@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
-import { Formik, Field } from 'formik';
+import { Formik } from 'formik';
+
 
 import { Icon } from '../icon/Icon';
 
@@ -11,7 +12,7 @@ const gotoAnchor = (e) => {
     setTimeout(() => {
         let element = document.getElementById(e.target.getAttribute('datahash'));
         element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 750)
+    }, 100)
 }
 
 const AppFooter = () => {
@@ -26,11 +27,17 @@ const AppFooter = () => {
                     <div className="footer__sub">
                         <div className="footer__sub-title">Subscribe to news</div>
                         <Formik
-                            initialValues={{ email: '' }}
+                            initialValues={{ email: '', checked: false }}
                             validate={values => {
                                 const errors = {};
-                                if (!values.email || !(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email))) {
-                                    errors.email = 'Required field';
+                                if (!(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email))) {
+                                    errors.email = 'Email entered incorrectly';
+                                }
+                                if (!values.email) {
+                                    errors.email = 'This field is required';
+                                }
+                                if (!values.checked) {
+                                    errors.checked = 'Required field';
                                 }
                                 return errors;
                             }}
@@ -39,7 +46,7 @@ const AppFooter = () => {
                                     console.log(values);
                                     setSubmitting(false);
                                     resetForm();
-                                }, 400);
+                                }, 3000);
                             }}
                         >
                             {({
@@ -48,17 +55,34 @@ const AppFooter = () => {
                                 touched,
                                 handleChange,
                                 handleSubmit,
+                                isSubmitting
                             }) => (
-
-                                <form className="footer__form" onSubmit={handleSubmit}>
-                                    <div className="footer__form-group">
-                                        <input type="text" name="email" className="footer__form-input" onChange={handleChange} value={values.email} placeholder="Email" />
-                                        <div className="footer__form-error">{errors.email && touched.email && errors.email}</div>
-                                        <button type="submit" className="footer__form-btn">
-                                            <Icon icon="submit" />
-                                        </button>
-                                    </div>
-                                </form>
+                                <>
+                                    {!isSubmitting ?
+                                        <form className="footer__form" onSubmit={handleSubmit}>
+                                            <div className="footer__form-group">
+                                                <input type="text" name="email" className={`footer__form-input ${errors.email && touched.email && errors.email ? 'error' : ''}`} onChange={handleChange} value={values.email} placeholder="Email" />
+                                                {errors.email && touched.email ? <div className="footer__form-error">{errors.email}</div> : null}
+                                                <button type="submit" className="footer__form-btn">
+                                                    <Icon icon="submit" />
+                                                </button>
+                                            </div>
+                                            <label className={`footer__form-label ${errors.checked && touched.checked && errors.checked ? 'error' : ''}`}>
+                                                <input type="checkbox" name="checked" onChange={handleChange} value={values.checked} />
+                                                <div className="footer__form-c">
+                                                    <Icon icon="check" />
+                                                </div>
+                                                <div className="footer__form-text">
+                                                    I agree to the processing of personal data and accept the terms of the <Link to="#">Privacy Policy</Link>
+                                                </div>
+                                            </label>
+                                        </form>
+                                        : null}
+                                    {isSubmitting ?
+                                        <div className="footer__success">You are subscribed to Æather news <Icon icon="success" /></div>
+                                        : null
+                                    }
+                                </>
                             )}
                         </Formik>
                     </div>

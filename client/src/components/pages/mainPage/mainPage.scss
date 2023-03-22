@@ -1,3 +1,312 @@
 .main {
+    &-start {
+        padding: 2.6rem 0 6rem;
+        overflow: hidden;
 
+        &__wrap {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 56.6rem 65.6rem;
+            grid-gap: 18rem;
+            position: relative;
+
+            &>*:not(.icon-bg) {
+                position: relative;
+                z-index: 1;
+            }
+
+            .icon-bg {
+                top: 6rem;
+                left: 12.2rem;
+            }
+        }
+
+        &__text {
+            .heading-secondary {
+                margin-bottom: 3.4rem;
+            }
+        }
+
+        &__descr {
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            color: #A7ACBB;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__slider {
+            margin-bottom: 2rem;
+            overflow: visible;
+
+            &-item {
+                padding: 2rem 3rem;
+                width: auto;
+                max-width: 64rem;
+
+                background: rgba(13, 68, 206, 0.15);
+                backdrop-filter: blur(7px);
+                border-radius: 30px;
+
+                font-weight: 600;
+                font-size: 1.8rem;
+                line-height: 2.7rem;
+            }
+        }
+
+        &__adv {
+            display: grid;
+            display: flex;
+            gap: 2rem;
+
+            &-item {
+                padding: 2rem 3rem;
+                max-width: 44rem;
+                background: rgba(13, 68, 206, 0.15);
+                backdrop-filter: blur(7px);
+                border-radius: 30px;
+            }
+
+            &-name {
+                margin-bottom: 2rem;
+                font-weight: 600;
+                font-size: 1.8rem;
+                line-height: 2.7rem;
+            }
+
+            &-descr {
+                line-height: 2.4rem;
+                color: #A7ACBB;
+
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+    &-introduction {
+        padding: 10rem 0 6rem;
+
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16rem;
+        }
+
+        &__text {
+            max-width: 62.2rem;
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            color: #A7ACBB;
+        }
+
+        &__info {
+            display: flex;
+            padding-left: 8.8rem;
+
+            &-btn {
+                padding: 2rem 4rem;
+                background: rgba(13, 68, 206, 0.1);
+                border-radius: 30px 30px 0px 0px;
+                cursor: pointer;
+                color: rgba(13, 68, 206, 0.5);
+                font-weight: 600;
+                font-size: 5rem;
+                line-height: 6rem;
+                transition: all .3s;
+
+                &.active,
+                &:hover {
+                    color: #FFFFFF;
+                    background: rgba(13, 68, 206, 0.15);
+                }
+            }
+        }
+
+        &__content {
+            background: rgba(13, 68, 206, 0.15);
+            border-radius: 30px;
+        }
+
+        &__tab {
+            display: none;
+            min-height: 45.7rem;
+            gap: 7.1rem;
+            padding: 8rem 12.8rem;
+            position: relative;
+            overflow: hidden;
+
+            &.react-tabs__tab-panel--selected {
+                display: flex;
+            }
+
+            &-descr {
+                font-size: 1.8rem;
+                line-height: 2.7rem;
+                color: #A7ACBB;
+                position: relative;
+                z-index: 1;
+            }
+
+            &-img {
+                width: 73.6rem;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
+            &:first-child {
+                .main-introduction__tab-descr {
+                    max-width: 53rem;
+                }
+
+                .main-introduction__tab-img {}
+            }
+        }
+    }
+
+    &-info {
+        padding: 0 0 6rem;
+
+        &.--other {
+            padding-bottom: 16rem;
+
+            .main-info__item {
+                &:nth-child(2) {
+                    .icon-bg {
+                        width: 90.2rem;
+                        left: 4rem;
+                        top: -3rem;
+                    }
+                }
+
+                &:nth-child(4) {
+                    .icon-bg {
+                        width: 62.7rem;
+                        right: -9rem;
+                        bottom: -12.5rem;
+                        left: auto;
+                        top: auto;
+                    }
+                }
+            }
+        }
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding-top: 10rem;
+
+            &:not(:last-child) {
+                margin-bottom: 6rem;
+            }
+
+            .icon-bg {
+                width: 40.8rem;
+                left: 6.2rem;
+                top: 4rem;
+            }
+
+            .heading-secondary {
+                max-width: 38rem;
+                position: relative;
+                z-index: 1;
+            }
+        }
+
+        &__descr {
+            max-width: 62.2rem;
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            color: #A7ACBB;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &-messages {
+        padding: 10rem 0 6rem;
+
+        .heading-secondary {
+            margin-bottom: 3rem;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        &__wrap {
+            display: flex;
+            gap: 7.3rem;
+
+            .icon-bg {
+                width: 58rem;
+                right: 0;
+                bottom: -5.5rem;
+            }
+        }
+
+        &__descr {
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            color: #A7ACBB;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &-inspecting {
+        padding: 10rem 0 6rem;
+
+        &__wrap {
+            display: grid;
+            grid-template-columns: 43.5% auto;
+            grid-gap: 9.4rem;
+        }
+
+        &__text {
+            .heading-secondary {
+                margin-bottom: 2.8rem;
+            }
+        }
+
+        &__descr {
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            color: #A7ACBB;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(2, .5fr);
+            grid-gap: 1.6rem;
+        }
+
+        &__item {
+            min-height: 30.4rem;
+            padding: 3rem;
+            background: rgba(13, 68, 206, 0.15);
+            border-radius: 30px;
+            position: relative;
+        }
+
+        &__name {
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        &__img {
+            width: 30.2rem;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
 }
