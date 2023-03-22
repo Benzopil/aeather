@@ -1,3 +1,5 @@
+@import '../../../style/_mixins';
+
 .main {
     &-start {
         padding: 2.6rem 0 6rem;
@@ -9,6 +11,11 @@
             grid-template-columns: 56.6rem 65.6rem;
             grid-gap: 18rem;
             position: relative;
+
+            @include respond(md) {
+                grid-template-columns: 56.6rem auto;
+                grid-gap: 5rem;
+            }
 
             &>*:not(.icon-bg) {
                 position: relative;
@@ -67,6 +74,10 @@
                 background: rgba(13, 68, 206, 0.15);
                 backdrop-filter: blur(7px);
                 border-radius: 30px;
+
+                @include respond(md) {
+                    padding: 2rem 2.3rem;
+                }
             }
 
             &-name {
@@ -139,6 +150,10 @@
             position: relative;
             overflow: hidden;
 
+            @include respond(md) {
+                padding: 6rem 9rem;
+            }
+
             &.react-tabs__tab-panel--selected {
                 display: flex;
             }
@@ -149,6 +164,11 @@
                 color: #A7ACBB;
                 position: relative;
                 z-index: 1;
+
+                @include respond(md) {
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                }
             }
 
             &-img {
@@ -190,6 +210,10 @@
                         bottom: -12.5rem;
                         left: auto;
                         top: auto;
+
+                        @include respond(md) {
+                            right: 0;
+                        }
                     }
                 }
             }
@@ -247,6 +271,10 @@
                 width: 58rem;
                 right: 0;
                 bottom: -5.5rem;
+
+                @include respond(md) {
+                    right: 5rem;
+                }
             }
         }
 
@@ -266,6 +294,11 @@
             display: grid;
             grid-template-columns: 43.5% auto;
             grid-gap: 9.4rem;
+
+            @include respond(md) {
+                grid-template-columns: 40% auto;
+                grid-gap: 5rem;
+            }
         }
 
         &__text {

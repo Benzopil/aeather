@@ -200,4 +200,9 @@ main {
 .--narrow {
     padding-left: 12.8rem;
     padding-right: 12.8rem;
+
+    @include respond(md) {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
 }
