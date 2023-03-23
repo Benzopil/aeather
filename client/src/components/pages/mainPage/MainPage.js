@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
+import SwiperCore, { Mousewheel } from 'swiper';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import 'swiper/css';
@@ -19,6 +20,8 @@ import introductionFirst from '../../../img/introduction-img-1.png';
 import introductionSecond from '../../../img/introduction-img-2.png';
 import inspectingImgFirst from '../../../img/inspecting-img-1.png';
 import inspectingImgSecond from '../../../img/inspecting-img-2.png';
+
+SwiperCore.use([Mousewheel]);
 
 const MainPage = () => {
 
@@ -52,6 +55,7 @@ const MainPage = () => {
                         className='main-start__slider'
                         spaceBetween={15}
                         slidesPerView={'auto'}
+                        mousewheel={true}
                         breakpoints={{
                             767.9: {
                                 slidesPerView: 4,
@@ -94,6 +98,7 @@ const MainPage = () => {
                         className='main-start__slider'
                         spaceBetween={15}
                         slidesPerView={'auto'}
+                        mousewheel={true}
                         breakpoints={{
                             767.9: {
                                 slidesPerView: 4,
