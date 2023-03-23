@@ -1,11 +1,14 @@
 import './privacy.scss';
 
+import iconBg from '../../../img/bg-2.svg';
+
 const Privacy = () => {
 
     return (
         <main className="privacy">
             <div className="container">
                 <div className="privacy__wrap">
+                    <img src={iconBg} alt="Æather" className="icon-bg" />
                     <h1>Privacy Policy</h1>
                     <p>Last updated: 23.03.2023</p>
                     <p>We operates http://www.aeathe.com. This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the Site.</p>

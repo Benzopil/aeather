@@ -5,9 +5,28 @@
         padding: 10rem 0 16rem;
         max-width: 100.6rem;
         margin: 0 auto;
+        position: relative;
 
         @include respond(sm) {
             padding: 6.4rem 0 10rem;
+        }
+
+        &>*:not(.icon-bg) {
+            position: relative;
+            z-index: 1;
+        }
+
+        .icon-bg {
+            width: 40.8rem;
+            top: 2.1rem;
+            left: 12.5rem;
+
+            @include respond(sm) {
+                width: 100%;
+                right: 0;
+                top: 0;
+                left: auto;
+            }
         }
 
         h1 {
