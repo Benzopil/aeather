@@ -73,7 +73,7 @@ const AppFooter = () => {
                                                     <Icon icon="check" />
                                                 </div>
                                                 <div className="footer__form-text">
-                                                    I agree to the processing of personal data and accept the terms of the <Link to="#">Privacy Policy</Link>
+                                                    I agree to the processing of personal data and accept the terms of the <Link to="/privacy">Privacy Policy</Link>
                                                 </div>
                                             </label>
                                         </form>
@@ -131,7 +131,7 @@ const AppFooter = () => {
                     </div>
                 </div>
                 <div className="footer__bottom">
-                    <Link className="footer__policy">Privacy Policy</Link>
+                    <Link to="/privacy" className="footer__policy">Privacy Policy</Link>
                     <div className="footer__copyright">© Æather, 2023</div>
                     <Link to="https://deus.team/" className="footer__deus" target="_blank">
                         Designed by

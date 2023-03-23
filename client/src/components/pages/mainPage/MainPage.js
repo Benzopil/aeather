@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-import { Icon } from '../../icon/Icon';
-
 import 'swiper/css';
+import 'swiper/css/pagination';
 import './mainPage.scss';
 
 import mainImg from '../../../img/main-img.png';
@@ -39,45 +38,86 @@ const MainPage = () => {
                         className='main-start__slider'
                         spaceBetween={15}
                         slidesPerView={'auto'}
+                        breakpoints={{
+                            767.9: {
+                                slidesPerView: 4,
+                            },
+                        }}
                     >
-                        <SwiperSlide className="main-start__slider-item">Source code of server and client<br /> under Apache 2.0 license</SwiperSlide>
-                        <SwiperSlide className="main-start__slider-item">Uses UDP, TCP, HTTP, HTTPS<br /> to bypass network filters</SwiperSlide>
-                        <SwiperSlide className="main-start__slider-item">Encryption with<br /> LibSodium*</SwiperSlide>
-                        <SwiperSlide className="main-start__slider-item">Encryption, authentication and<br /> authorization with LibSodium</SwiperSlide>
-                        <SwiperSlide className="main-start__slider-item">Highly reliable with smart<br /> replication, several QoS levels</SwiperSlide>
-                        <SwiperSlide className="main-start__slider-item">Minimum delivery latency due<br /> to choosing of a local server</SwiperSlide>
-                        <SwiperSlide className="main-start__slider-item">Supporting offline<br /> messages</SwiperSlide>
-                        <SwiperSlide className="main-start__slider-item">Protected against DDoS<br /> attacks</SwiperSlide>
-                        <SwiperSlide className="main-start__slider-item">Open source client and<br /> single node server</SwiperSlide>
-                        <SwiperSlide className="main-start__slider-item">API to create managed infrastructure with<br /> roles, access rights, permissions, quotas</SwiperSlide>
-                        <SwiperSlide className="main-start__slider-item">Suitable for networks with high packet loss rate (GSM) by using<br /> single packet message sending approach (No roundtrips)</SwiperSlide>
-                        <SwiperSlide className="main-start__slider-item">Supports multiple transport<br /> protocols (websocket, tcp, http(s),)</SwiperSlide>
-                        <SwiperSlide className="main-start__slider-item">DDoS Protection with proof-of-<br />compute authentication</SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Source code of server and client under Apache 2.0 license</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Uses UDP, TCP, HTTP, HTTPS to&nbsp;bypass network filters</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Encryption with LibSodium*</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Encryption, authentication and authorization with LibSodium</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Highly reliable with smart replication, several QoS levels</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Minimum delivery latency due to choosing of a local server</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Supporting offline messages</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Protected against DDoS attacks</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Open source client and single node server</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">DDoS Protection with proof-of-compute authentication</div>
+                        </SwiperSlide>
                     </Swiper>
 
-                    <div className="main-start__adv">
-                        <div className="main-start__adv-item">
-                            <div className="main-start__adv-name">Guaranteed message delivery:</div>
-                            <div className="main-start__adv-descr">Fault tolerance is improved with message replication on multiple Aether servers</div>
-                            <div className="main-start__adv-descr">Messages are kept on Aether servers awaiting the destination to be online</div>
-                        </div>
-                        <div className="main-start__adv-item">
-                            <div className="main-start__adv-name">Minimizing delivery latency:</div>
-                            <div className="main-start__adv-descr">When an Aether server failures</div>
-                            <div className="main-start__adv-descr">When an Aether server becomes invisible for sender or receiver</div>
-                            <div className="main-start__adv-descr">High % packet loss</div>
-                        </div>
-                        <div className="main-start__adv-item">
-                            <div className="main-start__adv-name">IoT friendly:</div>
-                            <div className="main-start__adv-descr">fire a packet and go to sleep (No roundtrips)</div>
-                            <div className="main-start__adv-descr">minimum binary footprint</div>
-                        </div>
-                        <div className="main-start__adv-item">
-                            <div className="main-start__adv-name">IoT friendly:</div>
-                            <div className="main-start__adv-descr">minimum binary footprint</div>
-                            <div className="main-start__adv-descr">No roundrips for sending / receiving messages</div>
-                        </div>
-                    </div>
+                    <Swiper
+                        className='main-start__slider'
+                        spaceBetween={15}
+                        slidesPerView={'auto'}
+                        breakpoints={{
+                            767.9: {
+                                slidesPerView: 4,
+                            },
+                        }}
+                    >
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Guaranteed message delivery:</div>
+                            <div className="main-start__slider-descr">Fault tolerance is improved with message replication on multiple Aether servers</div>
+                            <div className="main-start__slider-descr">Messages are kept on Aether servers awaiting the destination to be online</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Minimizing delivery latency:</div>
+                            <div className="main-start__slider-descr">When an Aether server failures</div>
+                            <div className="main-start__slider-descr">When an Aether server becomes invisible for sender or receiver</div>
+                            <div className="main-start__slider-descr">High % packet loss</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">IoT friendly:</div>
+                            <div className="main-start__slider-descr">fire a packet and go to sleep (No roundtrips)</div>
+                            <div className="main-start__slider-descr">minimum binary footprint</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">IoT friendly:</div>
+                            <div className="main-start__slider-descr">minimum binary footprint</div>
+                            <div className="main-start__slider-descr">No roundrips for sending / receiving messages</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">API to create managed infrastructure with roles, access rights, permissions, quotas</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Suitable for networks with high packet loss rate (GSM) by using single packet message
+                                sending approach (No roundtrips)</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Supports multiple transport protocols (websocket, tcp, http(s),)</div>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
             </section >
 
@@ -86,6 +126,7 @@ const MainPage = () => {
                     <div className="main-introduction__wrap --narrow">
                         <h2 className="heading-secondary">Introduction</h2>
                         <div className="main-introduction__text">Aether is a cloud of servers through which clients send / receive messages and check online presence. A client library is used for interacting through the proprietary binary protocol. The client library API is trivial and contains Initialization function with call-back for receiving messages and a function to send a message to a particular aether client.</div>
+                        <img src={iconBg} alt="Æather" className="icon-bg" />
                     </div>
                     <Tabs className="main-introduction__tabs" selectedTabClassName="active">
                         <TabList className="main-introduction__info">
@@ -100,23 +141,37 @@ const MainPage = () => {
                                 <img src={introductionFirst} alt="introduction" className="main-introduction__tab-img" />
                             </TabPanel>
                             <TabPanel className="main-introduction__tab">
-                                <div className="main-introduction__tab-descr">When a client library is initialized for the first time a new Aether client is created – Aether
-                                    generates an uid and a session key for the client. A parent client uid must be specified at the
-                                    initialization step for the new client. A parent is notified when a new child client is created [It is
-                                    done via message because the owner can be offline at the event time. The sender is Aether to
-                                    filter these messages by sender uid]. The parent is the client that takes ownership of the newly
-                                    created client. The ownership includes an ability to delete, block, transfer, manage quotas, allow
-                                    sending messages etc. All aether clients are divided into the non-crossing amespaces by owners.
-                                </div>
-                                <div className="main-introduction__tab-descr">A hierarchy of
-                                    owners (tree) can be built. The topmost owner is the Aether with a predefined uid [That uid is
-                                    not zero to avoid default initialized variable (typically by 0) to be valid]. A client is controlled by
-                                    the parent owner and all other predecessors only. [If only the parent controls the client then a
-                                    predecessor can force managing any client through the direct parent by threatening the parent
-                                    with, say, deletion of the parent]. A newly created client by default can't have children nodes [To
-                                    be not spammed with the notifications about newly created children]. The owner can give a
-                                    permission to allow a client to have children. The owner can give a permission to a child node to
-                                    transit this permission further.</div>
+                                <Swiper
+                                    modules={[Pagination]}
+                                    className='main-introduction__slider'
+                                    spaceBetween={20}
+                                    slidesPerView={'1'}
+                                    pagination={{ clickable: true }}
+                                    breakpoints={{
+                                        767.9: {
+                                            slidesPerView: 2,
+                                            spaceBetween: 50
+                                        },
+                                    }}
+                                >
+                                    <SwiperSlide className="main-introduction__tab-descr">When a client library is initialized for the first time a new Aether client is created – Aether
+                                        generates an uid and a session key for the client. A parent client uid must be specified at the
+                                        initialization step for the new client. A parent is notified when a new child client is created [It is
+                                        done via message because the owner can be offline at the event time. The sender is Aether to
+                                        filter these messages by sender uid]. The parent is the client that takes ownership of the newly
+                                        created client. The ownership includes an ability to delete, block, transfer, manage quotas, allow
+                                        sending messages etc. All aether clients are divided into the non-crossing amespaces by owners.
+                                    </SwiperSlide>
+                                    <SwiperSlide className="main-introduction__tab-descr">A hierarchy of
+                                        owners (tree) can be built. The topmost owner is the Aether with a predefined uid [That uid is
+                                        not zero to avoid default initialized variable (typically by 0) to be valid]. A client is controlled by
+                                        the parent owner and all other predecessors only. [If only the parent controls the client then a
+                                        predecessor can force managing any client through the direct parent by threatening the parent
+                                        with, say, deletion of the parent]. A newly created client by default can't have children nodes [To
+                                        be not spammed with the notifications about newly created children]. The owner can give a
+                                        permission to allow a client to have children. The owner can give a permission to a child node to
+                                        transit this permission further.</SwiperSlide>
+                                </Swiper>
                                 <img src={introductionSecond} alt="introduction" className="main-introduction__tab-img" />
                             </TabPanel>
                         </div>

@@ -181,7 +181,7 @@ main {
     background: #0F0F10;
 
     @include respond(sm) {
-        padding-top: 6.9rem;
+        padding-top: 4.5rem;
     }
 }
 
@@ -204,5 +204,9 @@ main {
     @include respond(md) {
         padding-left: 7rem;
         padding-right: 7rem;
+    }
+
+    @include respond(sm) {
+        padding: 0 1.6rem;
     }
 }

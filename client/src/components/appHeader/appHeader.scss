@@ -1,3 +1,5 @@
+@import '../../style/mixins';
+
 .header {
     width: 100%;
     padding: 2rem 0;
@@ -11,10 +13,22 @@
     top: 0;
     left: 0;
     z-index: 10;
+    will-change: backdrop-filter;
+    transition: all .3s;
+
+    @include respond(sm) {
+        padding: 0;
+    }
 
     &__wrap {
         display: flex;
         align-items: center;
+
+        @include respond(sm) {
+            .header__nav {
+                display: none;
+            }
+        }
     }
 
     &__logo {
@@ -26,15 +40,32 @@
     }
 
     &__nav {
+        @include respond(sm) {
+            margin-bottom: auto;
+            position: relative;
+            z-index: 1;
+        }
+
         &-list {
             display: flex;
             align-items: center;
             margin-right: 4rem;
+
+            @include respond(sm) {
+                display: block;
+                margin-right: 0;
+                margin-bottom: auto;
+            }
         }
 
         &-item {
             font-weight: 600;
             transition: color .3s;
+
+            @include respond(sm) {
+                font-size: 3rem;
+                line-height: 3.6rem;
+            }
 
             &:hover {
                 color: #0D44CE;
@@ -42,6 +73,11 @@
 
             &:not(:last-child) {
                 margin-right: 4rem;
+
+                @include respond(sm) {
+                    margin-right: 0;
+                    margin-bottom: 2rem;
+                }
             }
         }
     }
@@ -52,6 +88,10 @@
         font-weight: 600;
         transition: color .3s;
 
+        @include respond(sm) {
+            margin-right: 2.5rem;
+        }
+
         &:hover {
             color: #0D44CE;
         }
@@ -61,6 +101,102 @@
             height: 3.4rem;
             flex: 0 0 3.4rem;
             margin-right: 0.6rem;
+        }
+    }
+
+    &__burger {
+        width: 4.4rem;
+        height: 3.4rem;
+        position: relative;
+
+        &.active {
+            span {
+                transform: rotate(-45deg) translate(-0.2rem, 0.7rem);
+
+                &::before {
+                    transform: rotate(-90deg) translate(0.8rem, -0.6rem);
+                }
+            }
+        }
+
+        span {
+            width: 2.6rem;
+            height: 2px;
+            background: #F0F6FF;
+            position: absolute;
+            top: 1.1rem;
+            left: 0.6rem;
+            transition: transform .3s;
+
+            &::before {
+                content: '';
+                width: 2.6rem;
+                height: 2px;
+                background: #F0F6FF;
+                position: absolute;
+                top: .9rem;
+                left: 0.6rem;
+                transition: transform .3s;
+            }
+        }
+    }
+
+    &__menu {
+        padding: 0;
+        height: 0;
+        display: flex;
+        flex-direction: column;
+
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: opacity .5s;
+
+        &.active {
+            padding: 6rem 1.7rem 3rem;
+            height: 100vh;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &-elem {
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 1.1rem;
+            }
+        }
+
+        &-name {
+            margin-right: 1rem;
+            line-height: 2.4rem;
+            color: #A7ACBB;
+        }
+
+        &-link {
+            display: block;
+            font-weight: 600;
+            line-height: 2.4rem;
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+
+        &-img {
+            width: 23.1rem;
+            position: absolute;
+            right: 0;
+            bottom: 2.7rem;
         }
     }
 }

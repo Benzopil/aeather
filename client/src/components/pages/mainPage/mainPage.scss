@@ -5,6 +5,10 @@
         padding: 2.6rem 0 6rem;
         overflow: hidden;
 
+        @include respond(sm) {
+            padding: 6.4rem 0 5rem;
+        }
+
         &__wrap {
             display: grid;
             align-items: center;
@@ -17,6 +21,12 @@
                 grid-gap: 5rem;
             }
 
+            @include respond(sm) {
+                grid-template-columns: 100%;
+                grid-gap: 0;
+                margin-bottom: -3rem;
+            }
+
             &>*:not(.icon-bg) {
                 position: relative;
                 z-index: 1;
@@ -25,12 +35,23 @@
             .icon-bg {
                 top: 6rem;
                 left: 12.2rem;
+
+                @include respond(sm) {
+                    width: 100%;
+                    top: 1rem;
+                    right: 0;
+                    left: auto;
+                }
             }
         }
 
         &__text {
             .heading-secondary {
                 margin-bottom: 3.4rem;
+
+                @include respond(sm) {
+                    margin-bottom: 3rem;
+                }
             }
         }
 
@@ -38,56 +59,66 @@
             font-size: 1.8rem;
             line-height: 2.7rem;
             color: #A7ACBB;
+
+            @include respond(sm) {
+                font-size: 1.67rem;
+                line-height: 2.4rem;
+            }
         }
 
         &__img {
             width: 100%;
-        }
 
-        &__slider {
-            margin-bottom: 2rem;
-            overflow: visible;
-
-            &-item {
-                padding: 2rem 3rem;
-                width: auto;
-                max-width: 64rem;
-
-                background: rgba(13, 68, 206, 0.15);
-                backdrop-filter: blur(7px);
-                border-radius: 30px;
-
-                font-weight: 600;
-                font-size: 1.8rem;
-                line-height: 2.7rem;
+            @include respond(sm) {
+                max-width: 45rem;
+                margin: -3rem auto 0;
             }
         }
 
-        &__adv {
-            display: grid;
-            display: flex;
-            gap: 2rem;
+        &__slider {
+            overflow: visible;
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+
+                .main-start__slider-item {
+                    display: flex;
+                    align-items: center;
+                }
+            }
 
             &-item {
                 padding: 2rem 3rem;
-                max-width: 44rem;
+                height: auto;
+
                 background: rgba(13, 68, 206, 0.15);
                 backdrop-filter: blur(7px);
                 border-radius: 30px;
 
-                @include respond(md) {
-                    padding: 2rem 2.3rem;
+                @include respond(sm) {
+                    width: 28rem;
+                    padding: 2rem;
+                    border-radius: 20px;
                 }
             }
 
             &-name {
-                margin-bottom: 2rem;
                 font-weight: 600;
                 font-size: 1.8rem;
                 line-height: 2.7rem;
+
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+
+                @include respond(sm) {
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                }
             }
 
             &-descr {
+                font-size: 1.6rem;
                 line-height: 2.4rem;
                 color: #A7ACBB;
 
@@ -101,10 +132,45 @@
     &-introduction {
         padding: 10rem 0 6rem;
 
+        @include respond(sm) {
+            padding: 5rem 0;
+        }
+
         &__wrap {
             display: flex;
             justify-content: space-between;
             margin-bottom: 16rem;
+            position: relative;
+
+            &>*:not(.icon-bg) {
+                position: relative;
+                z-index: 1;
+            }
+
+            .icon-bg {
+                width: 54.8rem;
+                top: -7rem;
+                left: 13.6rem;
+
+                @include respond(sm) {
+                    width: 100%;
+                    left: -1.6rem;
+                    top: -4rem;
+                }
+            }
+
+            @include respond(sm) {
+                display: block;
+                margin-bottom: 10rem;
+
+                &.--narrow {
+                    padding: 0;
+                }
+
+                .heading-secondary {
+                    margin-bottom: 2rem;
+                }
+            }
         }
 
         &__text {
@@ -112,11 +178,20 @@
             font-size: 1.8rem;
             line-height: 2.7rem;
             color: #A7ACBB;
+
+            @include respond(sm) {
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+            }
         }
 
         &__info {
             display: flex;
             padding-left: 8.8rem;
+
+            @include respond(sm) {
+                padding-left: 0;
+            }
 
             &-btn {
                 padding: 2rem 4rem;
@@ -129,6 +204,15 @@
                 line-height: 6rem;
                 transition: all .3s;
 
+                @include respond(sm) {
+                    flex: 1;
+                    padding: 1rem;
+                    text-align: center;
+                    font-size: 3rem;
+                    line-height: 3.6rem;
+                    border-radius: 20px 20px 0px 0px;
+                }
+
                 &.active,
                 &:hover {
                     color: #FFFFFF;
@@ -140,22 +224,79 @@
         &__content {
             background: rgba(13, 68, 206, 0.15);
             border-radius: 30px;
+
+            @include respond(sm) {
+                border-radius: 0px 0px 20px 20px;
+            }
         }
 
         &__tab {
             display: none;
             min-height: 45.7rem;
-            gap: 7.1rem;
-            padding: 8rem 12.8rem;
+            padding: 8rem 10.8rem 8rem 12.8rem;
             position: relative;
             overflow: hidden;
+
+            &:nth-child(1) {
+                @include respond(sm) {
+                    padding-bottom: 22rem;
+                }
+
+                .main-introduction__tab-descr {
+                    max-width: 53rem;
+
+                    @include respond(sm) {
+                        max-width: none;
+                    }
+                }
+
+                .main-introduction__tab-img {
+                    width: 77.2rem;
+                    right: -22rem;
+                    bottom: -19rem;
+
+                    @include respond(sm) {
+                        width: 43rem;
+                        right: -10rem;
+                        bottom: -9rem;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                @include respond(sm) {
+                    padding-bottom: 8rem;
+                }
+
+                .main-introduction__tab-img {
+                    width: 103.4rem;
+                    right: -59rem;
+                    bottom: -40rem;
+
+                    @include respond(md) {
+                        right: -59rem;
+                        bottom: -39rem;
+                    }
+
+                    @include respond(sm) {
+                        width: 43.7rem;
+                        right: -22rem;
+                        bottom: -15rem;
+                    }
+                }
+            }
 
             @include respond(md) {
                 padding: 6rem 9rem;
             }
 
+            @include respond(sm) {
+                min-height: auto;
+                padding: 2rem 1.6rem;
+            }
+
             &.react-tabs__tab-panel--selected {
-                display: flex;
+                display: block;
             }
 
             &-descr {
@@ -169,21 +310,33 @@
                     font-size: 1.6rem;
                     line-height: 2.4rem;
                 }
+
+                @include respond(sm) {
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                }
             }
 
             &-img {
-                width: 73.6rem;
+                max-width: none;
                 position: absolute;
-                bottom: 0;
-                right: 0;
             }
+        }
 
-            &:first-child {
-                .main-introduction__tab-descr {
-                    max-width: 53rem;
+        &__slider {
+            @include respond(sm) {
+                padding-bottom: 4.4rem;
+
+                .swiper-pagination-bullet {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    opacity: 1;
+                    background: rgba(255, 255, 255, 0.4);
+
+                    &.swiper-pagination-bullet-active {
+                        background: #FFFFFF;
+                    }
                 }
-
-                .main-introduction__tab-img {}
             }
         }
     }
@@ -191,8 +344,16 @@
     &-info {
         padding: 0 0 6rem;
 
+        @include respond(sm) {
+            padding: 0 0 5rem;
+        }
+
         &.--other {
             padding-bottom: 16rem;
+
+            @include respond(sm) {
+                padding-bottom: 10rem;
+            }
 
             .main-info__item {
                 &:nth-child(2) {
@@ -200,6 +361,12 @@
                         width: 90.2rem;
                         left: 4rem;
                         top: -3rem;
+
+                        @include respond(sm) {
+                            width: 100%;
+                            left: 0;
+                            top: 1rem;
+                        }
                     }
                 }
 
@@ -214,6 +381,12 @@
                         @include respond(md) {
                             right: 0;
                         }
+
+                        @include respond(sm) {
+                            width: 100%;
+                            left: 0;
+                            bottom: -7rem;
+                        }
                     }
                 }
             }
@@ -225,20 +398,40 @@
             position: relative;
             padding-top: 10rem;
 
+            @include respond(sm) {
+                display: block;
+                padding-top: 5rem;
+            }
+
             &:not(:last-child) {
                 margin-bottom: 6rem;
+
+                @include respond(sm) {
+                    margin-bottom: 5rem;
+                }
             }
 
             .icon-bg {
                 width: 40.8rem;
                 left: 6.2rem;
                 top: 4rem;
+
+                @include respond(sm) {
+                    width: 100%;
+                    left: 1.1rem;
+                    top: -3.8rem;
+                }
             }
 
             .heading-secondary {
                 max-width: 38rem;
                 position: relative;
                 z-index: 1;
+
+                @include respond(sm) {
+                    max-width: none;
+                    margin-bottom: 2rem;
+                }
             }
         }
 
@@ -249,14 +442,27 @@
             color: #A7ACBB;
             position: relative;
             z-index: 1;
+
+            @include respond(sm) {
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+            }
         }
     }
 
     &-messages {
         padding: 10rem 0 6rem;
 
+        @include respond(sm) {
+            padding: 5rem 0;
+        }
+
         .heading-secondary {
             margin-bottom: 3rem;
+
+            @include respond(sm) {
+                margin-bottom: 2rem;
+            }
         }
 
         .container {
@@ -267,6 +473,10 @@
             display: flex;
             gap: 7.3rem;
 
+            @include respond(sm) {
+                display: block;
+            }
+
             .icon-bg {
                 width: 58rem;
                 right: 0;
@@ -274,6 +484,12 @@
 
                 @include respond(md) {
                     right: 5rem;
+                }
+
+                @include respond(sm) {
+                    width: 100%;
+                    left: 0;
+                    bottom: -4.8rem;
                 }
             }
         }
@@ -284,11 +500,24 @@
             color: #A7ACBB;
             position: relative;
             z-index: 1;
+
+            @include respond(sm) {
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+
+                &:first-child {
+                    margin-bottom: 2rem;
+                }
+            }
         }
     }
 
     &-inspecting {
         padding: 10rem 0 6rem;
+
+        @include respond(sm) {
+            padding: 5rem 0;
+        }
 
         &__wrap {
             display: grid;
@@ -299,11 +528,20 @@
                 grid-template-columns: 40% auto;
                 grid-gap: 5rem;
             }
+
+            @include respond(sm) {
+                grid-template-columns: 100%;
+                grid-gap: 3rem;
+            }
         }
 
         &__text {
             .heading-secondary {
                 margin-bottom: 2.8rem;
+
+                @include respond(sm) {
+                    margin-bottom: 2rem;
+                }
             }
         }
 
@@ -311,20 +549,51 @@
             font-size: 1.8rem;
             line-height: 2.7rem;
             color: #A7ACBB;
+
+            @include respond(sm) {
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+            }
         }
 
         &__list {
             display: grid;
             grid-template-columns: repeat(2, .5fr);
             grid-gap: 1.6rem;
+
+            @include respond(sm) {
+                grid-template-columns: 100%;
+                grid-gap: 1.6rem;
+            }
         }
 
         &__item {
             min-height: 30.4rem;
-            padding: 3rem;
+            padding: 3rem 3rem 15rem;
             background: rgba(13, 68, 206, 0.15);
             border-radius: 30px;
             position: relative;
+            overflow: hidden;
+
+            &:nth-child(1) {
+                .main-inspecting__img {
+                    width: 65.5rem;
+                    left: 10rem;
+                    top: 16rem;
+                }
+            }
+
+            &:nth-child(2) {
+                .main-inspecting__img {
+                    width: 32.5rem;
+                    left: 9rem;
+                    top: 17rem;
+                }
+            }
+
+            @include respond(sm) {
+                min-height: 34.5rem;
+            }
         }
 
         &__name {
@@ -333,13 +602,16 @@
             line-height: 2.7rem;
             position: relative;
             z-index: 1;
+
+            @include respond(sm) {
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+            }
         }
 
         &__img {
-            width: 30.2rem;
+            max-width: none;
             position: absolute;
-            bottom: 0;
-            right: 0;
         }
     }
 }
