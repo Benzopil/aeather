@@ -17,7 +17,7 @@ const AppHeader = () => {
         <header className="header">
             <div className="container">
                 <div className="header__wrap">
-                    <Link className="header__logo"><img src={logo} alt="Æather" /></Link>
+                    <Link to="/" className="header__logo"><img src={logo} alt="Æather" /></Link>
                     <HeaderNav />
                     <Link to="#" className="header__acc">
                         <Icon icon="login" />
