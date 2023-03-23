@@ -89,22 +89,22 @@ const AppFooter = () => {
                     <nav className="footer__nav">
                         <ul className="footer__nav-list">
                             <li className="footer__nav-item">
-                                <NavLink to="#introduction" className="footer__nav-link" datahash="introduction" onClick={(e) => gotoAnchor(e)}>Introduction</NavLink>
+                                <NavLink to="/#introduction" className="footer__nav-link" datahash="introduction" onClick={(e) => gotoAnchor(e)}>Introduction</NavLink>
                             </li>
                             <li className="footer__nav-item">
-                                <NavLink to="#app-server" className="footer__nav-link" datahash="app-server" onClick={(e) => gotoAnchor(e)}>Application server</NavLink>
+                                <NavLink to="/#app-server" className="footer__nav-link" datahash="app-server" onClick={(e) => gotoAnchor(e)}>Application server</NavLink>
                             </li>
                             <li className="footer__nav-item">
-                                <NavLink to="#proof" className="footer__nav-link" datahash="proof" onClick={(e) => gotoAnchor(e)}>Proof of computation</NavLink>
+                                <NavLink to="/#proof" className="footer__nav-link" datahash="proof" onClick={(e) => gotoAnchor(e)}>Proof of computation</NavLink>
                             </li>
                             <li className="footer__nav-item">
-                                <NavLink to="#messages" className="footer__nav-link" datahash="messages" onClick={(e) => gotoAnchor(e)}>Messages</NavLink>
+                                <NavLink to="/#messages" className="footer__nav-link" datahash="messages" onClick={(e) => gotoAnchor(e)}>Messages</NavLink>
                             </li>
                             <li className="footer__nav-item">
-                                <NavLink to="#inspecting" className="footer__nav-link" datahash="inspecting" onClick={(e) => gotoAnchor(e)}>Inspecting a client</NavLink>
+                                <NavLink to="/#inspecting" className="footer__nav-link" datahash="inspecting" onClick={(e) => gotoAnchor(e)}>Inspecting a client</NavLink>
                             </li>
                             <li className="footer__nav-item">
-                                <NavLink to="#tarification" className="footer__nav-link" datahash="tarification" onClick={(e) => gotoAnchor(e)}>Tarification</NavLink>
+                                <NavLink to="/#tarification" className="footer__nav-link" datahash="tarification" onClick={(e) => gotoAnchor(e)}>Tarification</NavLink>
                             </li>
                         </ul>
                     </nav>

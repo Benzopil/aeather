@@ -1,0 +1,52 @@
+@import '../../../style/mixins';
+
+.privacy {
+    &__wrap {
+        padding: 10rem 0 16rem;
+        max-width: 100.6rem;
+        margin: 0 auto;
+
+        @include respond(sm) {
+            padding: 6.4rem 0 10rem;
+        }
+
+        h1 {
+            margin-bottom: 3rem;
+            font-size: 5rem;
+            line-height: 6rem;
+
+            @include respond(sm) {
+                margin-bottom: 2rem;
+                font-size: 3rem;
+                line-height: 3.6rem;
+            }
+        }
+
+        h3 {
+            padding-top: 1rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+
+            @include respond(sm) {
+                margin-bottom: 1.5rem;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+            }
+        }
+
+        p {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            color: #A7ACBB;
+
+            @include respond(sm) {
+                margin-bottom: 1.5rem;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+            }
+        }
+    }
+}
