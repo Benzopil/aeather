@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -8,6 +8,9 @@ import 'swiper/css/pagination';
 import './mainPage.scss';
 
 import mainImg from '../../../img/main-img.png';
+import mainAnimFirst from '../../../img/main-anim-1.svg';
+import mainAnimSecond from '../../../img/main-anim-2.svg';
+import mainAnimThird from '../../../img/main-anim-3.svg';
 import iconBg from '../../../img/bg-1.svg';
 import iconBgSecond from '../../../img/bg-2.svg';
 import iconBgThird from '../../../img/bg-3.svg';
@@ -19,13 +22,24 @@ import inspectingImgSecond from '../../../img/inspecting-img-2.png';
 
 const MainPage = () => {
 
+    const [goAnim, setGoAnim] = useState(false);
+
+    useEffect(() => {
+        setGoAnim(true);
+    }, []);
+
     return (
         <main className="main">
 
             <section className="main-start">
                 <div className="container">
                     <div className="main-start__wrap">
-                        <img src={iconBg} alt="Æather" className="icon-bg" />
+                        <div className={`main-start__anim hidden-mobile ${goAnim ? 'active' : ''}`}>
+                            <img src={mainAnimFirst} alt="Æather" />
+                            <img src={mainAnimSecond} alt="Æather" />
+                            <img src={mainAnimThird} alt="Æather" />
+                        </div>
+                        <img src={iconBg} alt="Æather" className={`icon-bg hidden-desktop ${goAnim ? 'active' : ''}`} />
                         <div className="main-start__text">
                             <h1 className="heading-primary">Æather</h1>
                             <h2 className="heading-secondary">— a communication platform</h2>

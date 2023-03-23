@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import { Formik } from 'formik';
+import { Formik, Field } from 'formik';
 
 
 import { Icon } from '../icon/Icon';
@@ -68,7 +68,7 @@ const AppFooter = () => {
                                                 </button>
                                             </div>
                                             <label className={`footer__form-label ${errors.checked && touched.checked && errors.checked ? 'error' : ''}`}>
-                                                <input type="checkbox" name="checked" onChange={handleChange} value={values.checked} />
+                                                <Field type="checkbox" name="checked"/>
                                                 <div className="footer__form-c">
                                                     <Icon icon="check" />
                                                 </div>
