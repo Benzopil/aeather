@@ -37,12 +37,11 @@ const MainPage = () => {
             <section className="main-start">
                 <div className="container">
                     <div className="main-start__wrap">
-                        <div className={`main-start__anim hidden-mobile ${goAnim ? 'active' : ''}`}>
+                        <div className={`main-start__anim ${goAnim ? 'active' : ''}`}>
                             <img src={mainAnimFirst} alt="Æather" />
                             <img src={mainAnimSecond} alt="Æather" />
                             <img src={mainAnimThird} alt="Æather" />
                         </div>
-                        <img src={iconBg} alt="Æather" className={`icon-bg hidden-desktop ${goAnim ? 'active' : ''}`} />
                         <div className="main-start__text">
                             <h1 className="heading-primary">Æather</h1>
                             <h2 className="heading-secondary">— a communication platform</h2>

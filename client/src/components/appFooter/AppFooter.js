@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { Formik, Field } from 'formik';
+import axios from 'axios';
 
 
 import { Icon } from '../icon/Icon';
@@ -14,6 +15,15 @@ const gotoAnchor = (e) => {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100)
 }
+
+const sendEmail = async (values) => {
+    try {
+        const response = await axios.post('http://localhost:5000/mail', values);
+        console.log(response.data);
+    } catch (error) {
+        console.error(error);
+    }
+};
 
 const AppFooter = () => {
 
@@ -42,9 +52,10 @@ const AppFooter = () => {
                                 return errors;
                             }}
                             onSubmit={(values, { setSubmitting, resetForm }) => {
+                                sendEmail(values);
                                 setTimeout(() => {
-                                    console.log(values);
                                     setSubmitting(false);
+                                    console.log(values);
                                     resetForm();
                                 }, 3000);
                             }}
@@ -68,7 +79,7 @@ const AppFooter = () => {
                                                 </button>
                                             </div>
                                             <label className={`footer__form-label ${errors.checked && touched.checked && errors.checked ? 'error' : ''}`}>
-                                                <Field type="checkbox" name="checked"/>
+                                                <Field type="checkbox" name="checked" />
                                                 <div className="footer__form-c">
                                                     <Icon icon="check" />
                                                 </div>
