@@ -18,7 +18,7 @@ const AppHeader = () => {
             <header className="header">
                 <div className="container">
                     <div className="header__wrap">
-                        <Link to="/" className="header__logo"><img src={logo} alt="Æather" /></Link>
+                        <Link to="/" className="header__logo"><img src={logo} alt="Æther" /></Link>
                         <HeaderNav />
                         <Link to="#" className="header__acc">
                             <Icon icon="login" />
@@ -36,7 +36,7 @@ const AppHeader = () => {
                     <div className="header__menu-contacts">
                         <div className="header__menu-elem">
                             <div className="header__menu-name">Email</div>
-                            <Link to="mailto:æather@æather.ru" className="header__menu-link">æather@æather.ru</Link>
+                            <Link to="mailto:æther@æther.ru" className="header__menu-link">æther@æther.ru</Link>
                         </div>
                         <div className="header__menu-elem">
                             <div className="header__menu-name">Telephone</div>
@@ -48,7 +48,7 @@ const AppHeader = () => {
                             <Link to="#" className="header__menu-link">LinkedIn</Link>
                         </div>
                     </div>
-                    <img src={menuImg} alt="æather" className="header__menu-img" />
+                    <img src={menuImg} alt="æther" className="header__menu-img" />
                 </div>
             </div>
         </>

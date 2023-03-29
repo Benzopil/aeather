@@ -38,17 +38,17 @@ const MainPage = () => {
                 <div className="container">
                     <div className="main-start__wrap">
                         <div className={`main-start__anim ${goAnim ? 'active' : ''}`}>
-                            <img src={mainAnimFirst} alt="Æather" />
-                            <img src={mainAnimSecond} alt="Æather" />
-                            <img src={mainAnimThird} alt="Æather" />
+                            <img src={mainAnimFirst} alt="Æther" />
+                            <img src={mainAnimSecond} alt="Æther" />
+                            <img src={mainAnimThird} alt="Æther" />
                         </div>
                         <div className="main-start__text">
-                            <h1 className="heading-primary">Æather</h1>
+                            <h1 className="heading-primary">Æther</h1>
                             <h2 className="heading-secondary">— a communication platform</h2>
                             <div className="main-start__descr">Aether is a distributed cloud M2M communication and online presence service. Want to send messages from one instance of your mobile, IoT, desktop and web app to another? <br /><br />
                                 Aether in two steps, send a message and forget - Aether takes the rest: encryption, replication, DDoS protection and guaranteed real-time delivery at scale.</div>
                         </div>
-                        <img src={mainImg} alt="Æather" className="main-start__img" />
+                        <img src={mainImg} alt="Æther" className="main-start__img" />
                     </div>
                     <Swiper
                         className='main-start__slider'
@@ -144,7 +144,7 @@ const MainPage = () => {
                     <div className="main-introduction__wrap --narrow">
                         <h2 className="heading-secondary">Introduction</h2>
                         <div className="main-introduction__text">Aether is a cloud of servers through which clients send / receive messages and check online presence. A client library is used for interacting through the proprietary binary protocol. The client library API is trivial and contains Initialization function with call-back for receiving messages and a function to send a message to a particular aether client.</div>
-                        <img src={iconBg} alt="Æather" className="icon-bg" />
+                        <img src={iconBg} alt="Æther" className="icon-bg" />
                     </div>
                     <Tabs className="main-introduction__tabs" selectedTabClassName="active">
                         <TabList className="main-introduction__info">
@@ -217,7 +217,7 @@ const MainPage = () => {
                             rate at which the owner is notified with the newly created clients [An owner can't set maximum
                             value to a child because the child can be very specific and limited in computational power, like in
                             microcontroller].</div>
-                        <img src={iconBgSecond} alt="Æather" className="icon-bg" />
+                        <img src={iconBgSecond} alt="Æther" className="icon-bg" />
                     </div>
                 </div>
             </section>
@@ -238,7 +238,7 @@ const MainPage = () => {
                             If the Aether uid is specified with the “subtree” flag then the client can receive messages
                             from any Aether client. A client can't send messages to themself [ Sending a message to
                             themself is useless because the message is received immediately with the reply of the Aether server. An attempt to send a message to themself or to another client that has no permission to receive the message has a cost of sending a message. That should help prevent spam.].</div>
-                        <img src={iconBgThird} alt="Æather" className="icon-bg" />
+                        <img src={iconBgThird} alt="Æther" className="icon-bg" />
                     </div>
                 </div>
             </section>
@@ -280,7 +280,7 @@ const MainPage = () => {
                             A user can replenish the account of any client at any time — all parents' accounts are replenished
                             too.
                         </div>
-                        <img src={iconBgFourth} alt="Æather" className="icon-bg" />
+                        <img src={iconBgFourth} alt="Æther" className="icon-bg" />
                     </div>
                     <div className="main-info__item">
                         <h2 className="heading-secondary">Try-on money</h2>
@@ -301,7 +301,7 @@ const MainPage = () => {
                             If a particular node's account is zero then all children nodes with any balance at any depth are
                             limited in service because all charges of children are subtracted from the owner's account.
                         </div>
-                        <img src={iconBg} alt="Æather" className="icon-bg" />
+                        <img src={iconBg} alt="Æther" className="icon-bg" />
                     </div>
                 </div>
             </section>

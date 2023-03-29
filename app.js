@@ -43,8 +43,8 @@ app.post('/mail', (req, res) => {
     const mailOptions = {
         from: 'aether.receiver@gmail.com',
         to: 'razinkin.s.v@gmail.com, stnslvmukhin@gmail.com',
-        subject: 'Заполнена форма "Subscribe to news" с сайта Æather',
-        text: `Заполнена форма "Subscribe to news" с сайта Æather\nEmail: ${email}
+        subject: 'Заполнена форма "Subscribe to news" с сайта Æther',
+        text: `Заполнена форма "Subscribe to news" с сайта Æther\nEmail: ${email}
         `,
     };
 

@@ -32,7 +32,7 @@ const AppFooter = () => {
             <div className="container">
                 <div className="footer__top">
                     <Link to="/" className="footer__logo">
-                        <img src={logo} alt="Æather" />
+                        <img src={logo} alt="Æther" />
                     </Link>
                     <div className="footer__sub">
                         <div className="footer__sub-title">Subscribe to news</div>
@@ -90,7 +90,7 @@ const AppFooter = () => {
                                         </form>
                                         : null}
                                     {isSubmitting ?
-                                        <div className="footer__success">You are subscribed to Æather news <Icon icon="success" /></div>
+                                        <div className="footer__success">You are subscribed to Æther news <Icon icon="success" /></div>
                                         : null
                                     }
                                 </>
@@ -123,7 +123,7 @@ const AppFooter = () => {
                         <div className="footer__contacts-item">
                             <div className="footer__contacts-subtitle">Email</div>
                             <div className="footer__contacts-wrap">
-                                <Link to="mailto:Æather@Æather.ru" className="footer__contacts-elem">Æather@Æather.ru</Link>
+                                <Link to="mailto:Æther@Æther.ru" className="footer__contacts-elem">Æther@Æther.ru</Link>
                             </div>
                         </div>
                         <div className="footer__contacts-item">
@@ -143,7 +143,7 @@ const AppFooter = () => {
                 </div>
                 <div className="footer__bottom">
                     <Link to="/privacy" className="footer__policy">Privacy Policy</Link>
-                    <div className="footer__copyright">© Æather, 2023</div>
+                    <div className="footer__copyright">© Æther, 2023</div>
                     <Link to="https://deus.team/" className="footer__deus" target="_blank">
                         Designed by
                         <Icon icon="deus" />
