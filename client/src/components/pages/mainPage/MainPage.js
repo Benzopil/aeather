@@ -46,7 +46,10 @@ const MainPage = () => {
                             <h1 className="heading-primary">Æther</h1>
                             <h2 className="heading-secondary">– the communication platform</h2>
                             <div className="main-start__descr">Aether is a distributed cloud machine-to-machine communication and online presence service with open source client libraries. <br /><br />
-                                Want to send messages from one instance of your mobile, IoT, desktop and web application to another? Include Aether client library, initialize, send a message and forget - Aether takes the rest: encryption, replication, DDoS protection and guaranteed real-time delivery or offline storage messages at scale.</div>
+                                Want to send messages from one instance of your mobile, IoT, desktop and web application to another? Include Aether client library, initialize, send a message and forget - Aether takes the rest: encryption, replication, DDoS protection and guaranteed real-time delivery or offline storage messages at scale.<br /><br />
+                                And it's easy to start with a free tier, no registration and later paying-as-you-go!
+                            </div>
+                            <a href="#" className="main-start__btn">Tutorial</a>
                         </div>
                         <img src={mainImg} alt="Æther" className="main-start__img" />
                     </div>
@@ -54,7 +57,6 @@ const MainPage = () => {
                         className='main-start__slider'
                         spaceBetween={15}
                         slidesPerView={'auto'}
-                        mousewheel={true}
                         breakpoints={{
                             767.9: {
                                 slidesPerView: 4,
@@ -97,7 +99,6 @@ const MainPage = () => {
                         className='main-start__slider'
                         spaceBetween={15}
                         slidesPerView={'auto'}
-                        mousewheel={true}
                         breakpoints={{
                             767.9: {
                                 slidesPerView: 4,
@@ -134,6 +135,44 @@ const MainPage = () => {
                         </SwiperSlide>
                         <SwiperSlide className="main-start__slider-item">
                             <div className="main-start__slider-name">Supports multiple transport protocols (websocket, tcp, http(s),)</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Low latency of message delivery</div>
+                            <div className="main-start__slider-descr">
+                                Aether lands clients into the closest data center from many around the world.</div>
+                            <div className="main-start__slider-descr"> Low latency at cold start and with connections with high ratio of packet loss - uses the proprietary binary protocol with no round-trips.</div>
+                            <div className="main-start__slider-descr">Low latency even if something went wrong: Server unreachable due to DDoS attack, network filtering, IP blocking, MITM etc. Aether immediately switches to another IP/server.</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Works from everywhere</div>
+                            <div className="main-start__slider-descr">
+                                A most suitable protocol (UDP, TCP, WebSocket, HTTP, HTTPS) is chosen to get connectivity in restricted networks.
+                            </div>
+                            <div className="main-start__slider-descr">Highly customizable open sourced (Apache 2.0) client libraries for C++, Java, JavaScript are implemented (Github URL).</div>
+                            <div className="main-start__slider-descr">Multiple QoS levels are supported that meet requirements even for battery powered constrained IoT devices.</div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Cybersecurity</div>
+                            <div className="main-start__slider-descr">
+                                Uses LibSodium and the best practices verified as open source solutions. Aether doesn't store messages (except off-line messages) and other sensitive information.
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Corp infrastructure integration</div>
+                            <div className="main-start__slider-descr">
+                                Allows to manage applications, clients and services with user-defined policies, roles and permissions. Manage:
+                                <ul>
+                                    <li>Sending messages permission</li>
+                                    <li>Quotas</li>
+                                    <li>Blocking / deletion clients</li>
+                                </ul>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className="main-start__slider-item">
+                            <div className="main-start__slider-name">Pricing</div>
+                            <div className="main-start__slider-descr">
+                                The expected average price for 1000 online clients per month is $1. Pay-as-you-go. Currently free in Beta.
+                            </div>
                         </SwiperSlide>
                     </Swiper>
                 </div>
