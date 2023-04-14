@@ -44,9 +44,9 @@ const MainPage = () => {
                         </div>
                         <div className="main-start__text">
                             <h1 className="heading-primary">Æther</h1>
-                            <h2 className="heading-secondary">— a communication platform</h2>
-                            <div className="main-start__descr">Aether is a distributed cloud M2M communication and online presence service. Want to send messages from one instance of your mobile, IoT, desktop and web app to another? <br /><br />
-                                Aether in two steps, send a message and forget - Aether takes the rest: encryption, replication, DDoS protection and guaranteed real-time delivery at scale.</div>
+                            <h2 className="heading-secondary">– the communication platform</h2>
+                            <div className="main-start__descr">Aether is a distributed cloud machine-to-machine communication and online presence service with open source client libraries. <br /><br />
+                                Want to send messages from one instance of your mobile, IoT, desktop and web application to another? Include Aether client library, initialize, send a message and forget - Aether takes the rest: encryption, replication, DDoS protection and guaranteed real-time delivery or offline storage messages at scale.</div>
                         </div>
                         <img src={mainImg} alt="Æther" className="main-start__img" />
                     </div>

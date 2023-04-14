@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HttpsRedirect from 'react-https-redirect';
 
 import ScrollToTop from "./helpers/ScrollToTop";
 import AppHeader from './components/appHeader/AppHeader';
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <Router>
+      <HttpsRedirect>
       <ScrollToTop />
       <AppHeader />
       <Routes>
@@ -17,6 +19,7 @@ function App() {
         <Route exact path='/privacy' element={<Privacy />} />
       </Routes>
       <AppFooter />
+      </HttpsRedirect>
     </Router>
   );
 }
