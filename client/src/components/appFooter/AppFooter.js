@@ -144,9 +144,10 @@ const AppFooter = () => {
                 <div className="footer__bottom">
                     <Link to="/privacy" className="footer__policy">Privacy Policy</Link>
                     <div className="footer__copyright">© Æther, 2023</div>
-                    <Link to="https://deus.team/" className="footer__deus" target="_blank">
+                    <Link to="mailto:hello@deus.team" className="footer__deus" target="_blank">
                         Designed by
                         <Icon icon="deus" />
+                        <span>hello@deus.team</span>
                     </Link>
                 </div>
             </div>

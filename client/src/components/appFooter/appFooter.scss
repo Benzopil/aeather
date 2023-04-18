@@ -289,8 +289,15 @@
     &__deus {
         justify-self: end;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: flex-end;
         transition: color .3s;
+
+        span {
+            width: 100%;
+            text-align: right;
+        }
 
         @include respond(sm) {
             justify-self: start;
