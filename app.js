@@ -41,7 +41,7 @@ app.post('/mail', (req, res) => {
 
     // настройки электронного письма
     const mailOptions = {
-        from: 'aether.receiver@gmail.com',
+        from: 'Aether<noreply@aethernet.io>',
         to: 'razinkin.s.v@gmail.com, stnslvmukhin@gmail.com',
         subject: 'Заполнена форма "Subscribe to news" с сайта Æther',
         text: `Заполнена форма "Subscribe to news" с сайта Æther\nEmail: ${email}

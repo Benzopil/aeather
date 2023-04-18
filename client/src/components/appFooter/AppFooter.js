@@ -123,7 +123,7 @@ const AppFooter = () => {
                         <div className="footer__contacts-item">
                             <div className="footer__contacts-subtitle">Email</div>
                             <div className="footer__contacts-wrap">
-                                <Link to="mailto:Æther@Æther.ru" className="footer__contacts-elem">Æther@Æther.ru</Link>
+                                <Link to="mailto:info@aethernet.io" className="footer__contacts-elem">info@aethernet.io</Link>
                             </div>
                         </div>
                         <div className="footer__contacts-item">
