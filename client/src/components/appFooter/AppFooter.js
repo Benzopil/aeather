@@ -129,7 +129,7 @@ const AppFooter = () => {
                         <div className="footer__contacts-item">
                             <div className="footer__contacts-subtitle">Telephone</div>
                             <div className="footer__contacts-wrap">
-                                <Link to="tel:123 456 7891 230" className="footer__contacts-elem">123 456 7891 230</Link>
+                                <Link to="tel:+14084758377" className="footer__contacts-elem">+1 408-475-8377</Link>
                             </div>
                         </div>
                         <div className="footer__contacts-item">
